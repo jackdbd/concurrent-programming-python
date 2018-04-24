@@ -5,7 +5,7 @@ from threading import Thread
 
 def calculate_factorial(number):
     factorial = 1
-    for n in range(1, number+1):
+    for n in range(1, number + 1):
         factorial *= n
     return factorial
 
@@ -24,4 +24,10 @@ threads = []
 for _ in range(number_of_threads):
     threads.append(Thread(target=calculate_factorial, args=(number,)))
 
-print(timeit.timeit("calculate_factorial_using_threads(threads)", "from __main__ import calculate_factorial_using_threads, threads", number=1))
+print(
+    timeit.timeit(
+        "calculate_factorial_using_threads(threads)",
+        "from __main__ import calculate_factorial_using_threads, threads",
+        number=1,
+    )
+)

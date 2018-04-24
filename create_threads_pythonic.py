@@ -7,12 +7,17 @@ to threading.current_thread().name.
 """
 import urllib3
 import threading
+
 # disable warning for untrusted certificates
 urllib3.disable_warnings()
 
 
 def download_url(file_name, url):
-    print("Downloading the contents of {} into {} in thread {}".format(url, file_name, threading.current_thread().name))
+    print(
+        "Downloading the contents of {} into {} in thread {}".format(
+            url, file_name, threading.current_thread().name
+        )
+    )
     http = urllib3.PoolManager()
 
     response = http.request(method="GET", url=url)
@@ -27,7 +32,7 @@ test_dict = {
     "Google": "http://www.google.com",
     "Python": "http://www.python.org",
     "Bing": "http://www.bing.com",
-    "Yahoo": "http://www.yahoo.com"
+    "Yahoo": "http://www.yahoo.com",
 }
 
 print("Main thread starting execution...")

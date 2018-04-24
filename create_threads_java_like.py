@@ -4,11 +4,13 @@ This program shows a more Java-way style of creating threads.
 """
 import urllib3
 from threading import Thread
+
 # disable warning for untrusted certificates
 urllib3.disable_warnings()
 
 
 class URLDownload(Thread):
+
     def __init__(self, file_name, url):
         Thread.__init__(self)
         self.file_name = "Thread_" + file_name
@@ -30,7 +32,7 @@ test_dict = {
     "Google": "http://www.google.com",
     "Python": "http://www.python.org",
     "Bing": "http://www.bing.com",
-    "Yahoo": "http://www.yahoo.com"
+    "Yahoo": "http://www.yahoo.com",
 }
 
 print("Main thread starting execution...")
