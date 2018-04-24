@@ -10,6 +10,9 @@ Consumer thread should not read from an empty buffer.
 
 Usage:
     $ python producer_consumer_pattern.py
+
+See Also:
+    producer_consumer_queue.py
 """
 import time
 import random
