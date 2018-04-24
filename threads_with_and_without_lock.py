@@ -10,9 +10,9 @@ Try running this script a few times with --lock. You should never see a skipped 
 
 Usage:
     # without lock (sometimes produces undesidered output)
-    $ python threads_with_and_without_lock
+    $ python threads_with_and_without_lock.py
     # with lock (always produces desidered output)
-    $ python threads_with_and_without_lock -l
+    $ python threads_with_and_without_lock.py -l
 """
 import time
 import random
